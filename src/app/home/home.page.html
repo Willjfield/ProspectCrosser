@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Prospect Crosser
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-button expand="block" size="large" color="dark" class="main-btn" #turnonbtn ion-button block (click)="StrobeLight()">
+    TOGGLE STROBE
+  </ion-button>
+  
+  <ion-item #strobefreq>
+    <ion-range (ionChange)="RangeChange($event)" (ionBlur)="OnBlur($event)">
+      <ion-icon slot="start" size="small" name="funnel"></ion-icon>
+      <ion-icon slot="end" size="large" name="funnel"></ion-icon>
+    </ion-range>
+  </ion-item>
+  <div class="flashing-bg" #flash></div>
+  <h1 #nolight></h1>
+</ion-content>
